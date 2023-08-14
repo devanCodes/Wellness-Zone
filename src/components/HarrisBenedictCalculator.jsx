@@ -1,0 +1,161 @@
+import React, { useState } from 'react';
+
+function HarrisBenedictCalculator() {
+    // creating state variables for user inputs
+    const [gender, setGender] = useState('male');
+    const [weight, setWeight] = useState('');
+    const [weightUnit, setWeightUnit] = useState('kg');
+    const [heightFeet, setHeightFeet] = useState('');
+    const [heightInches, setHeightInches] = useState('');
+    const [heightUnit, setHeightUnit] = useState('m');
+    const [age, setAge] = useState('');
+    const [activityLevel, setActivityLevel] = useState('sedentary');
+    const [caloricMaintenance, setCaloricMaintenance] = useState('');
+
+    // define calculation logic based on the H-B formula
+
+    const calculateCaloricMaintenance = () => {
+        let bmr = 0;
+
+        // define separate functions for male and female equations
+        const calculateBMRForMale = () => {
+            const weightInKg = weightUnit === 'kg' ? parseFloat(weight) : parseFloat(weight) * 0.453592;
+
+            let heightInCm = 0;
+            if (heightUnit === 'm') {
+                // If height is in meters, convert centimeters to meters
+                heightInCm = parseFloat(heightFeet) * 100 + parseFloat(heightInches);
+            } else {
+                // If height is in feet/inches, convert feet and inches to centimeters
+                heightInCm = parseFloat(heightFeet) * 30.48 + parseFloat(heightInches) * 2.54;
+            }
+
+            return 66.5 + 13.75 * weightInKg + 5.003 * heightInCm - 6.755 * parseFloat(age);
+        };
+
+        const calculateBMRForFemale = () => {
+            const weightInKg = weightUnit === 'kg' ? parseFloat(weight) : parseFloat(weight) * 0.453592;
+
+            let heightInCm = 0;
+            if (heightUnit === 'm') {
+                // If height is in meters, convert centimeters to meters
+                heightInCm = parseFloat(heightFeet) * 100 + parseFloat(heightInches);
+            } else {
+                // If height is in feet/inches, convert feet and inches to centimeters
+                heightInCm = parseFloat(heightFeet) * 30.48 + parseFloat(heightInches) * 2.54;
+            }
+
+            return 655.1 + 9.563 * weightInKg + 1.85 * heightInCm - 4.676 * parseFloat(age);
+        };
+
+
+        // call appropriate function based on gender
+        if (gender === 'male') {
+            bmr = calculateBMRForMale();
+        } else {
+            bmr = calculateBMRForFemale();
+        }
+
+        // applying activity level multipliers to BMR to get caloric maintenance
+        const activiyMultipliers = {
+            sedentary: 1.2,
+            lightlyActive: 1.375,
+            moderatelyActive: 1.55,
+            veryActive: 1.725,
+            extraActive: 1.9,
+        };
+
+        const maintenance = bmr * activiyMultipliers[activityLevel];
+
+        // update state variable for displaying the calculated result
+        setCaloricMaintenance(maintenance.toFixed(2));
+    };
+
+    return (
+        <div className="p-6 mx-auto w-full space-y-6">
+            <label className="block text-xl font-medium mb-1">
+                Gender:
+                <select
+                    className="px-4 py-1 border border-black border-solid rounded-lg w-fit h-1/6 ml-1"
+                    id="gender" 
+                    value={gender} 
+                    onChange={(e) => setGender(e.target.value)}
+                >
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </label>
+            <label className="block text-xl font-medium mb-1">
+                Weight:
+                <input
+                    className="w-1/12 mr-1 ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
+                    type="number" 
+                    value={weight} 
+                    onChange={(e) => setWeight(e.target.value)} 
+                /> 
+                <select
+                    className="px-2 py-1 border border-black border-solid rounded-lg w-fit h-1/6"
+                    id="weight" 
+                    value={weightUnit} 
+                    onChange={(e) => setWeightUnit(e.target.value)}
+                >
+                    <option value="kg">kg</option>
+                    <option value="lb">lb</option>
+                </select>
+            </label>
+            <label className="block text-xl font-medium mb-1">
+                Height:
+                {heightUnit === 'ft' ? (
+                    <>
+                        <input className="w-1/12 ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6" type="number" value={heightFeet} onChange={(e) => setHeightFeet(e.target.value)} /> feet
+                        <input className="w-1/12 ml-3 px-2 py-1 border border-black border-solid rounded-lg h-1/6" type="number" value={heightInches} onChange={(e) => setHeightInches(e.target.value)} /> inches
+                    </>
+                ) : (
+                    <>
+                        <input className="w-1/12 ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6" type="number" value={heightFeet} onChange={(e) => setHeightFeet(e.target.value)} /> meters
+                        <input className="w-1/12 ml-3 px-2 py-1 border border-black border-solid rounded-lg h-1/6" type="number" value={heightInches} onChange={(e) => setHeightInches(e.target.value)} /> centimeters
+                    </>
+                )}
+                <select
+                    className="w-fit mr-5 ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6"
+                    id="height" 
+                    value={heightUnit} 
+                    onChange={(e) => setHeightUnit(e.target.value)}
+                >
+                    <option value="m">meters/centimeters</option>
+                    <option value="ft">feet/inches</option>
+                </select>
+            </label>
+            <label className="block text-xl font-medium mb-1">
+                Age:
+                <input className="w-1/12 ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6" type="number" value={age} onChange={(e) => setAge(e.target.value)} />
+            </label>
+            <label className="block text-xl font-medium mb-1">
+                Activity Level:
+                <select
+                    className="ml-1 w-fit px-2 py-1 border border-black border-solid rounded-lg h-1/6"
+                    id="activityLevel" 
+                    value={activityLevel} 
+                    onChange={(e) => setActivityLevel(e.target.value)}
+                >
+                    <option value="sedentary">Sedentary (little to no exercise)</option>
+                    <option value="lightlyActive">Lightly Active (light exercise/sports 1-3 days/week)</option>
+                    <option value="moderatelyActive">Moderately Active (moderate exercise/sports 3-5 days/week)</option>
+                    <option value="veryActive">Very Active (hard exercise sports 6-7 days a week)</option>
+                    <option value="extraActive">Extra Active (very hard exercise/sports & a physical job)</option>
+                </select>
+            </label>
+            <button
+                className="flex justify-center mx-auto font-semibold p-3 px-6 pt-2 w-44 text-white bg-stone-700 rounded-lg baseline hover:bg-stone-600 hover:duration-500 hover:scale-105"
+                onClick={calculateCaloricMaintenance}>Calculate</button>
+            {caloricMaintenance && (
+                <div>
+                    <h2>Caloric Maintenance:</h2>
+                    <p>{Math.round(caloricMaintenance)} calories</p>
+                </div>
+            )}
+        </div>
+    )
+};
+
+export default HarrisBenedictCalculator;
