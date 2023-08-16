@@ -91,7 +91,20 @@ function HarrisBenedictCalculator() {
                     className="w-1/12 mr-1 ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
                     type="number" 
                     value={weight} 
-                    onChange={(e) => setWeight(e.target.value)} 
+                    onChange={(e) => {
+                        const newValue = e.target.value.replace(/[^0-9]/g, ''); // Remove any non-digit characters
+                        if (newValue.length === 1) {
+                            setWeight(newValue); // Keep single digits including zero
+                        } else {
+                            setWeight(newValue.replace(/^0+/, '')); // Remove leading zeros
+                        }
+                    }}
+                    onKeyDown={(e) => {
+                        if (e.key === '.' || e.key === 'e') {
+                            e.preventDefault(); // Prevent entering period or exponential notation
+                        }
+                    }}
+                    min="0"
                 /> 
                 <select
                     className="px-2 py-1 border border-black border-solid rounded-lg w-fit h-1/6"
@@ -107,13 +120,85 @@ function HarrisBenedictCalculator() {
                 Height:
                 {heightUnit === 'ft' ? (
                     <>
-                        <input className="w-1/12 ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6" type="number" value={heightFeet} onChange={(e) => setHeightFeet(e.target.value)} /> feet
-                        <input className="w-1/12 ml-3 px-2 py-1 border border-black border-solid rounded-lg h-1/6" type="number" value={heightInches} onChange={(e) => setHeightInches(e.target.value)} /> inches
+                        <input 
+                            className="w-1/12 ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
+                            type="number" 
+                            value={heightFeet} 
+                            onChange={(e) => {
+                                const newValue = e.target.value.replace(/[^0-9]/g, ''); // Remove any non-digit characters
+                                if (newValue.length === 1) {
+                                    setHeightFeet(newValue); // Keep single digits including zero
+                                } else {
+                                    setHeightFeet(newValue.replace(/^0+/, '')); // Remove leading zeros
+                                }
+                            }}
+                            onKeyDown={(e) => {
+                                if (e.key === '.' || e.key === 'e') {
+                                    e.preventDefault(); // Prevent entering period or exponential notation
+                                }
+                            }}
+                            min="0" 
+                        /> feet
+                        <input 
+                            className="w-1/12 ml-3 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
+                            type="number" 
+                            value={heightInches} 
+                            onChange={(e) => {
+                                const newValue = e.target.value.replace(/[^0-9]/g, ''); // Remove any non-digit characters
+                                if (newValue.length === 1) {
+                                    setHeightInches(newValue); // Keep single digits including zero
+                                } else {
+                                    setHeightInches(newValue.replace(/^0+/, '')); // Remove leading zeros
+                                }
+                            }}
+                            onKeyDown={(e) => {
+                                if (e.key === '.' || e.key === 'e') {
+                                    e.preventDefault(); // Prevent entering period or exponential notation
+                                }
+                            }}
+                            min="0" 
+                        /> inches
                     </>
                 ) : (
                     <>
-                        <input className="w-1/12 ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6" type="number" value={heightFeet} onChange={(e) => setHeightFeet(e.target.value)} /> meters
-                        <input className="w-1/12 ml-3 px-2 py-1 border border-black border-solid rounded-lg h-1/6" type="number" value={heightInches} onChange={(e) => setHeightInches(e.target.value)} /> centimeters
+                        <input 
+                            className="w-1/12 ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
+                            type="number" 
+                            value={heightFeet} 
+                            onChange={(e) => {
+                                const newValue = e.target.value.replace(/[^0-9]/g, ''); // Remove any non-digit characters
+                                if (newValue.length === 1) {
+                                    setHeightFeet(newValue); // Keep single digits including zero
+                                } else {
+                                    setHeightFeet(newValue.replace(/^0+/, '')); // Remove leading zeros
+                                }
+                            }}
+                            onKeyDown={(e) => {
+                                if (e.key === '.' || e.key === 'e') {
+                                    e.preventDefault(); // Prevent entering period or exponential notation
+                                }
+                            }}
+                            min="0" 
+                        /> meters
+                        <input 
+                            className="w-1/12 ml-3 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
+                            type="number" 
+                            value={heightInches} 
+                            onChange={(e) => {
+                                const newValue = e.target.value.replace(/[^0-9]/g, ''); // Remove any non-digit characters
+                                if (newValue.length === 1) {
+                                    setHeightInches(newValue); // Keep single digits including zero
+                                } else {
+                                    setHeightInches(newValue.replace(/^0+/, '')); // Remove leading zeros
+                                }
+                            }}
+                            onKeyDown={(e) => {
+                                if (e.key === '.' || e.key === 'e') {
+                                    e.preventDefault(); // Prevent entering period or exponential notation
+                                }
+                            }}
+                            min="0" 
+                        /> centimeters
                     </>
                 )}
                 <select
@@ -128,7 +213,25 @@ function HarrisBenedictCalculator() {
             </label>
             <label className="block text-xl font-medium mb-1">
                 Age:
-                <input className="w-1/12 ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6" type="number" value={age} onChange={(e) => setAge(e.target.value)} />
+                <input 
+                    className="w-1/12 ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
+                    type="number" 
+                    value={age} 
+                    onChange={(e) => {
+                        const newValue = e.target.value.replace(/[^0-9]/g, ''); // Remove any non-digit characters
+                        if (newValue.length === 1) {
+                            setAge(newValue); // Keep single digits including zero
+                        } else {
+                            setAge(newValue.replace(/^0+/, '')); // Remove leading zeros
+                        }
+                    }}
+                    onKeyDown={(e) => {
+                        if (e.key === '.' || e.key === 'e') {
+                            e.preventDefault(); // Prevent entering period or exponential notation
+                        }
+                    }}  
+                    min="0"
+                />
             </label>
             <label className="block text-xl font-medium mb-1">
                 Activity Level:
