@@ -19,7 +19,7 @@ const Slideshow = () => {
     };
 
     const handleJoinNow = () => {
-        let prefilledMessage = `I am interested in plan #${currentSlide + 1}`;
+        let prefilledMessage = `Estoy interesado/a en plan #${currentSlide + 1}`;
         navigate('/contact', { state: { prefilledMessage } });
     };
 

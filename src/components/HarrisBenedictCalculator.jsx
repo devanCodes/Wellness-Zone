@@ -15,6 +15,41 @@ function HarrisBenedictCalculator() {
     // define calculation logic based on the H-B formula
 
     const calculateCaloricMaintenance = () => {
+        // validate input values
+        if (!age || !weight || !heightFeet || !heightInches) {
+            alert('Please fill in all required fields.'); // display an alert if any required field is empty
+            return;
+        }
+
+        // additional validation based on specific criteria
+        let errorMessage = null;
+
+        switch (true) {
+            case age < 1:
+                errorMessage = 'Age must be at least 1.';
+                break;
+            case weight < 1 && weightUnit === 'kg':
+                errorMessage = 'Weight must be at least 1 kg.';
+                break;
+            case weight < 1 && weightUnit === 'lb':
+                errorMessage = 'Weight must be at least 1 lb.';
+                break;
+            case heightFeet < 1 && heightUnit === 'ft':
+                errorMessage = 'Height must be at least 1 ft.';
+                break;
+            case heightFeet < 1 && heightUnit === 'm':
+                errorMessage = 'Height must be at least 1 m';
+                break;
+            default:
+                // no specific error, proceed with calculation
+                break;
+        }
+
+        if (errorMessage) {
+            alert(errorMessage); // display the specific error message
+            return;
+        }
+
         let bmr = 0;
 
         // define separate functions for male and female equations
@@ -104,7 +139,7 @@ function HarrisBenedictCalculator() {
                             e.preventDefault(); // Prevent entering period or exponential notation
                         }
                     }}
-                    min="0"
+                    min="1"
                 /> 
                 <select
                     className="px-2 py-1 border border-black border-solid rounded-lg w-fit h-1/6"
@@ -137,7 +172,7 @@ function HarrisBenedictCalculator() {
                                     e.preventDefault(); // Prevent entering period or exponential notation
                                 }
                             }}
-                            min="0" 
+                            min="1" 
                         /> feet
                         <input 
                             className="w-1/12 ml-3 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
@@ -178,7 +213,7 @@ function HarrisBenedictCalculator() {
                                     e.preventDefault(); // Prevent entering period or exponential notation
                                 }
                             }}
-                            min="0" 
+                            min="1" 
                         /> meters
                         <input 
                             className="w-1/12 ml-3 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
@@ -230,7 +265,7 @@ function HarrisBenedictCalculator() {
                             e.preventDefault(); // Prevent entering period or exponential notation
                         }
                     }}  
-                    min="0"
+                    min="1"
                 />
             </label>
             <label className="block text-xl font-medium mb-1">
