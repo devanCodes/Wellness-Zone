@@ -50,9 +50,11 @@ const Slideshow = () => {
                         <BsCircle className="xl:text-2xl lg:text-2xl md:text-xl sm:text-lg" color={index === currentSlide ? 'white' : 'white'} />
                     </div>)}
             </div>
-            <button className="absolute bottom-32 left-1/3 transform -translate-x-1/2 p-8 px-20 pt-6 text-white text-4xl bg-turqoise rounded-full hover:bg-turqoise/80 hover:duration-1000" onClick={handleJoinNow}>
-                Join Now!
-            </button>
+            <div className="absolute top-3/4 left-1/2 mt-20 transform -translate-x-1/2 -translate-y-3/4 xl:p-4 xl:px-14 xl:pt-4 lg:p-4 lg:px-12 lg:pt-4 text-white xl:text-4xl lg:text-4xl md:text-2xl sm:text-xl bg-turqoise rounded-full hover:bg-turqoise/80 hover:duration-1000">
+                <button onClick={handleJoinNow}>
+                    Join Now!
+                </button>
+            </div>
         </div>
     );
 };

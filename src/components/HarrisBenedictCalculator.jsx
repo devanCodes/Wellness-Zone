@@ -107,7 +107,7 @@ function HarrisBenedictCalculator() {
     };
 
     return (
-        <div className="p-6 mx-auto w-full space-y-6">
+        <div className="p-6 mx-auto container w-full space-y-6">
             <label className="block text-xl font-medium mb-1">
                 Gender:
                 <select

@@ -16,8 +16,8 @@ const Home = () => {
                 <TransformationSlideshow />
             <h1 className="text-3xl flex justify-center my-10 font-semibold">Testimonials</h1>
             <Testimonials />
-            <div className="bg-stone-300 text-3xl flex flex-col justify-center items-center pb-10">
-                <h1 className="py-5 font-semibold">Calculate Your Maintenance Calories (Harris-Benedict Formula)</h1>
+            <div className="bg-stone-300 text-3xl flex flex-col justify-center items-center pb-10 container mx-auto">
+                <h1 className="py-5 px-5 font-semibold text-center">Calculate Your Maintenance Calories (Harris-Benedict Formula)</h1>
                 <HarrisBenedictCalculator />
             </div>
         </div>
