@@ -50,8 +50,8 @@ import { PiQuotesFill } from 'react-icons/pi';
 
 const Testimonials = () => {
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-10 p-6">
-            <div className="relative bg-purple-600 text-white p-8 rounded-lg lg:col-span-2">
+        <div className="grid grid-cols-1 xl:grid-cols-4 gap-6 mt-10 p-6">
+            <div className="relative bg-purple-600 text-white p-8 rounded-lg xl:col-span-2">
                 <div className="absolute top-0 right-6 z-0 text-6xl">
                     <PiQuotesFill />
                 </div>
@@ -74,7 +74,7 @@ const Testimonials = () => {
                 </p>
             </div>
             <div className="relative bg-gray-600 text-white p-8 rounded-lg">
-                <div className="absolute top-0 right-6 z-0 text-6xl">
+                <div className="absolute top-0 right-6 z-0 text-6xl lg:hidden">
                     <PiQuotesFill />
                 </div>
                 <div className="relative z-10 flex justify-start space-x-4">
@@ -93,8 +93,8 @@ const Testimonials = () => {
                 bastante pero sin llegar a presionar. I love you.
                 </p>
             </div>
-            <div className="relative bg-turqoise_dark text-gray-800 p-8 rounded-lg lg:row-start-2">
-                <div className="absolute top-0 right-6 z-0 text-6xl">
+            <div className="relative bg-turqoise_dark text-gray-800 p-8 rounded-lg xl:row-start-2">
+                <div className="absolute top-0 right-6 z-0 text-6xl lg:hidden">
                     <PiQuotesFill />
                 </div>
                 <div className="relative z-10 flex justify-start space-x-4">
@@ -112,8 +112,8 @@ const Testimonials = () => {
                 Muy Buena.
                 </p>
             </div>
-            <div className="relative bg-gray-900 text-white p-8 rounded-lg lg:col-span-2">
-                <div className="absolute top-0 right-6 z-0 text-6xl">
+            <div className="relative bg-gray-900 text-white p-8 rounded-lg xl:col-span-2">
+                <div className="absolute top-0 right-6 z-0 text-6xl lg:hidden">
                     <PiQuotesFill />
                 </div>
                 <div className="relative z-10 flex justify-start space-x-4">
@@ -132,8 +132,8 @@ const Testimonials = () => {
                 a mis necesidades que me han llevado a grandes logros tanto físico como emocional.
                 </p>
             </div>
-            <div className="relative bg-white text-gray-800 p-8 rounded-lg lg:row-span-2 lg:row-start-1 lg:col-start-4">
-                <div className="absolute top-0 right-6 z-0 text-6xl">
+            <div className="relative bg-white text-gray-800 p-8 rounded-lg xl:row-span-2 xl:row-start-1 xl:col-start-4">
+                <div className="absolute top-0 right-6 z-0 text-6xl lg:hidden">
                     <PiQuotesFill />
                 </div>
                 <div className="relative z-10 flex justify-start space-x-4">

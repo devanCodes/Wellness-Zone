@@ -18,7 +18,7 @@ const Home = () => {
             </div>
             <div className="bg-gradient-to-b from-stone-500 to-stone-300">
                 <div className="">
-                    <h1 className="text-3xl flex justify-center my-10 font-semibold">Testimonials</h1>
+                    <h1 className="text-3xl flex justify-center mt-10 font-semibold text-white">Testimonials</h1>
                     <Testimonials />
                 </div>
                 <div className="text-3xl flex flex-col justify-center items-center pb-10 container mx-auto">

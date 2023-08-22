@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { RxHamburgerMenu } from 'react-icons/rx';
+import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx';
 
 const Navigation = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,8 +11,10 @@ const Navigation = () => {
   
     return (
       <div className="bg-turqoise">
-        <button className="text-3xl sm:hidden absolute right-2 top-52 pt-2" onClick={toggleMenu}>
-          <RxHamburgerMenu />
+        <button 
+        className="text-3xl sm:hidden absolute right-2 top-52 pt-2" 
+          onClick={toggleMenu}>
+          {isMenuOpen ? <RxCross1 /> : <RxHamburgerMenu />}
         </button>
         {isMenuOpen && (
           <nav className="flex flex-col mx-auto py-4 sm:hidden font-medium">

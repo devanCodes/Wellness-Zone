@@ -39,6 +39,14 @@ const Slideshow = () => {
             <div className="absolute top-1/2 right-2 transform -translate-y-1/2 p-2 text-white cursor-pointer hover:text-white/70">
                 <BsArrowRightSquare className="xl:text-6xl lg:text-4xl md:text-3xl sm:text-2xl" onClick={handleNextSlide} />
             </div>
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                <button
+                    className="xl:mb-16 xl:px-14 xl:py-4 xl:text-4xl lg:mb-12 lg:px-12 lg:py-4 lg:text-3xl md:mb-8 md:px-8 md:py-2 md:text-2xl mb-8 px-6 py-2 text-xl text-white bg-turqoise rounded-full hover:bg-turqoise/80 hover:duration-1000 lg:hover:scale-105"
+                    onClick={handleJoinNow}
+                >
+                    Join Now!
+                </button>
+            </div>
             <div className="absolute flex bottom-4 space-x-1">
                 {photos.map((photo, index) =>
                     <div
@@ -49,11 +57,6 @@ const Slideshow = () => {
                     >
                         <BsCircle className="xl:text-2xl lg:text-2xl md:text-xl sm:text-lg" color={index === currentSlide ? 'white' : 'white'} />
                     </div>)}
-            </div>
-            <div className="absolute top-3/4 left-1/2 mt-20 transform -translate-x-1/2 -translate-y-3/4 xl:p-4 xl:px-14 xl:pt-4 lg:p-4 lg:px-12 lg:pt-4 text-white xl:text-4xl lg:text-4xl md:text-2xl sm:text-xl bg-turqoise rounded-full hover:bg-turqoise/80 hover:duration-1000">
-                <button onClick={handleJoinNow}>
-                    Join Now!
-                </button>
             </div>
         </div>
     );
