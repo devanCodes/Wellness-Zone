@@ -2,6 +2,7 @@ import React from 'react';
 import ContactForm from '../components/ContactForm.jsx';
 import Logos from '../components/Logos.jsx';
 import Navigation from '../components/Navigation.jsx';
+import Footer from '../components/Footer.jsx';
 
 const Contact = () => {
     return (
@@ -12,6 +13,7 @@ const Contact = () => {
                 <h1 className="py-5 font-semibold">Contact Me!</h1> 
                 <ContactForm />
             </div>
+            <Footer />
         </div>
     )
 };

@@ -5,6 +5,7 @@ import TransformationSlideshow from '../components/TransformationSlideshow.jsx';
 import Testimonials from '../components/Testimonials.jsx';
 import Logos from '../components/Logos.jsx';
 import Navigation from '../components/Navigation.jsx';
+import Footer from '../components/Footer.jsx';
 
 const Home = () => {
     return (
@@ -26,6 +27,7 @@ const Home = () => {
                     <HarrisBenedictCalculator />
                 </div>
             </div>
+            <Footer />
         </div>
     )
 };
