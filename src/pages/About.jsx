@@ -9,7 +9,9 @@ const About = () => {
         <div className="relative container mx-auto lg:w-3/4 sm:w-screen">
             <Logos />
             <Navigation />
-            <HistorySlideshow />
+            <div id="HistorySlideshow">
+                <HistorySlideshow />
+            </div>
             <Footer />
         </div>
     )

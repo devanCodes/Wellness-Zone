@@ -9,7 +9,7 @@ const Contact = () => {
         <div className="relative container mx-auto xl:w-3/4 lg:w-3/4 md:w-3/4 sm:w-screen">
             <Logos />
             <Navigation />
-            <div className="bg-stone-300 text-2xl flex flex-col justify-center items-center pb-10">
+            <div className="bg-stone-300 text-2xl flex flex-col justify-center items-center pb-10" id="ContactForm">
                 <h1 className="py-5 font-semibold">Contact Me!</h1> 
                 <ContactForm />
             </div>
