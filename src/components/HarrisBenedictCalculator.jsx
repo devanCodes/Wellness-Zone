@@ -107,7 +107,7 @@ function HarrisBenedictCalculator() {
     };
 
     return (
-        <div className="p-6 mx-auto container w-full space-y-6">
+        <div className="p-6 mx-auto container flex flex-col w-full space-y-6">
             <label className="block text-xl font-medium mb-1">
                 Gender:
                 <select
@@ -123,7 +123,7 @@ function HarrisBenedictCalculator() {
             <label className="block text-xl font-medium mb-1">
                 Weight:
                 <input
-                    className="w-1/12 mr-1 ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
+                    className="w-[15%] mr-1 ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
                     type="number" 
                     value={weight} 
                     onChange={(e) => {
@@ -156,7 +156,7 @@ function HarrisBenedictCalculator() {
                 {heightUnit === 'ft' ? (
                     <>
                         <input 
-                            className="w-1/12 ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
+                            className="w-[15%] ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
                             type="number" 
                             value={heightFeet} 
                             onChange={(e) => {
@@ -175,7 +175,7 @@ function HarrisBenedictCalculator() {
                             min="1" 
                         /> feet
                         <input 
-                            className="w-1/12 ml-3 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
+                            className="w-[15%] ml-3 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
                             type="number" 
                             value={heightInches} 
                             onChange={(e) => {
@@ -197,7 +197,7 @@ function HarrisBenedictCalculator() {
                 ) : (
                     <>
                         <input 
-                            className="w-1/12 ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
+                            className="w-[15%] ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
                             type="number" 
                             value={heightFeet} 
                             onChange={(e) => {
@@ -216,7 +216,7 @@ function HarrisBenedictCalculator() {
                             min="1" 
                         /> meters
                         <input 
-                            className="w-1/12 ml-3 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
+                            className="w-[15%] ml-3 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
                             type="number" 
                             value={heightInches} 
                             onChange={(e) => {
@@ -237,7 +237,7 @@ function HarrisBenedictCalculator() {
                     </>
                 )}
                 <select
-                    className="w-fit mr-5 ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6"
+                    className="w-fit mr-5 mt-2 lg:mt-0 lg:ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6"
                     id="height" 
                     value={heightUnit} 
                     onChange={(e) => setHeightUnit(e.target.value)}
@@ -249,7 +249,7 @@ function HarrisBenedictCalculator() {
             <label className="block text-xl font-medium mb-1">
                 Age:
                 <input 
-                    className="w-1/12 ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
+                    className="w-[15%] ml-1 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
                     type="number" 
                     value={age} 
                     onChange={(e) => {
@@ -268,10 +268,10 @@ function HarrisBenedictCalculator() {
                     min="1"
                 />
             </label>
-            <label className="block text-xl font-medium mb-1">
+            <label className="text-xl font-medium mb-1">
                 Activity Level:
                 <select
-                    className="ml-1 w-fit px-2 py-1 border border-black border-solid rounded-lg h-1/6"
+                    className="lg:ml-1 w-3/4 mt-1 lg:mt-0 px-2 py-1 border border-black border-solid rounded-lg h-1/6"
                     id="activityLevel" 
                     value={activityLevel} 
                     onChange={(e) => setActivityLevel(e.target.value)}

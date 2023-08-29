@@ -29,7 +29,7 @@ const TransformationSlideshow = () => {
 
 
     return (
-        <div className="bg-white relative container flex flex-col items-center mx-auto pb-10">
+        <div className="bg-white relative container flex flex-col items-center mx-auto">
             <div className="aspect-auto">
                 <img 
                     src={currentPhoto} 

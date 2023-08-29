@@ -6,7 +6,7 @@ import Footer from '../components/Footer.jsx';
 
 const About = () => {
     return (
-        <div className="relative container mx-auto lg:w-3/4 sm:w-screen">
+        <div className="relative container mx-auto xl:w-3/4 lg:w-3/4 md:w-screen sm:w-screen">
             <Logos />
             <Navigation />
             <div id="HistorySlideshow">

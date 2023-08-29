@@ -9,7 +9,7 @@ import Footer from '../components/Footer.jsx';
 
 const Home = () => {
     return (
-        <div className="relative container flex flex-col mx-auto xl:w-3/4 lg:w-3/4 md:w-3/4 sm:w-screen">
+        <div className="relative container flex flex-col mx-auto xl:w-3/4 lg:w-3/4 md:w-screen sm:w-screen">
             <Logos />
             <Navigation />
             <div id="Slideshow">
@@ -26,7 +26,7 @@ const Home = () => {
                 </div>
                 <hr></hr>
                 <div className="text-3xl flex flex-col justify-center items-center pb-10 container mx-auto" id="HarrisBenedictCalculator">
-                    <h1 className="py-5 px-5 font-semibold text-center">Calculate Your Maintenance Calories (Harris-Benedict Formula)</h1>
+                    <h1 className="py-5 px-5 font-semibold text-center">Calculate Your Maintenance Calories <div></div> (Harris-Benedict Formula)</h1>
                     <HarrisBenedictCalculator />
                 </div>
             </div>

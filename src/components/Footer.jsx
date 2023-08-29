@@ -14,28 +14,28 @@ const Footer = () => {
                     <div className="w-40 m-4 flex justify-start flex-col text-white">
                         <h4 className="text-md leading-4 mb-4">Home</h4>
                         <Link to="/#Slideshow" className="text-gray-200 no-underline">
-                            <p className="text-sm leading-4 my-2 mx-0 cursor-pointer">Training Plans</p>
+                            <p className="text-sm leading-4 my-2 mx-0 cursor-pointer hover:underline hover:text-white">Training Plans</p>
                         </Link>
                         <Link to="/#TransformationSlideshow" className="text-gray-200 no-underline">
-                            <p className="text-sm leading-4 my-2 mx-0 cursor-pointer">Transformations</p>
+                            <p className="text-sm leading-4 my-2 mx-0 cursor-pointer hover:underline hover:text-white">Transformations</p>
                         </Link>
                         <Link to="/#Testimonials" className="text-gray-200 no-underline">
-                            <p className="text-sm leading-4 my-2 mx-0 cursor-pointer">Testimonials</p>
+                            <p className="text-sm leading-4 my-2 mx-0 cursor-pointer hover:underline hover:text-white">Testimonials</p>
                         </Link>
                         <Link to="/#HarrisBenedictCalculator" className="text-gray-200 no-underline">
-                            <p className="text-sm leading-4 my-2 mx-0 cursor-pointer">Maintenance Calorie Calculator</p>
+                            <p className="text-sm leading-4 my-2 mx-0 cursor-pointer hover:underline hover:text-white">Maintenance Calorie Calculator</p>
                         </Link>
                     </div>
                     <div className="w-40 m-4 flex justify-start flex-col text-white">
                         <h4 className="text-md leading-4 mb-4">About</h4>
                         <Link to="/about#HistorySlideshow" className="text-gray-200 no-underline">
-                            <p className="text-sm leading-4 my-2 mx-0 cursor-pointer">My Story</p>
+                            <p className="text-sm leading-4 my-2 mx-0 cursor-pointer hover:underline hover:text-white">My Story</p>
                         </Link>
                     </div>
                     <div className="w-40 m-4 flex justify-start flex-col text-white">
                         <h4 className="text-md leading-4 mb-4">Contact</h4>
                         <Link to="/contact#ContactForm" className="text-gray-200 no-underline">
-                            <p className="text-sm leading-4 my-2 mx-0 cursor-pointer">Contact Form</p>
+                            <p className="text-sm leading-4 my-2 mx-0 cursor-pointer hover:underline hover:text-white">Contact Form</p>
                         </Link>
                     </div>
                 </div>
