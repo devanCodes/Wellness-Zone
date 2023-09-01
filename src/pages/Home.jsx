@@ -25,7 +25,9 @@ const Home = () => {
                     <Testimonials />
                 </div>
                 <hr></hr>
-                <div className="text-3xl flex flex-col justify-center items-center pb-10 container mx-auto" id="HarrisBenedictCalculator">
+                <div 
+                    className="text-3xl flex flex-col justify-center items-center pb-10 container mx-auto" 
+                    id="HarrisBenedictCalculator">
                     <h1 className="py-5 px-5 font-semibold text-center">Calculate Your Maintenance Calories <div></div> (Harris-Benedict Formula)</h1>
                     <HarrisBenedictCalculator />
                 </div>

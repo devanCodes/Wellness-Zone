@@ -173,7 +173,7 @@ function HarrisBenedictCalculator() {
                                 }
                             }}
                             min="1" 
-                        /> feet
+                        /> ft
                         <input 
                             className="w-[15%] ml-3 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
                             type="number" 
@@ -192,7 +192,7 @@ function HarrisBenedictCalculator() {
                                 }
                             }}
                             min="0" 
-                        /> inches
+                        /> in
                     </>
                 ) : (
                     <>
@@ -214,7 +214,7 @@ function HarrisBenedictCalculator() {
                                 }
                             }}
                             min="1" 
-                        /> meters
+                        /> m
                         <input 
                             className="w-[15%] ml-3 px-2 py-1 border border-black border-solid rounded-lg h-1/6" 
                             type="number" 
@@ -233,7 +233,7 @@ function HarrisBenedictCalculator() {
                                 }
                             }}
                             min="0" 
-                        /> centimeters
+                        /> cm
                     </>
                 )}
                 <select
