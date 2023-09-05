@@ -34,7 +34,7 @@ const TransformationSlideshow = () => {
                 <img 
                     src={currentPhoto} 
                     alt={`Photo ${currentSlide + 1}`} 
-                    className="w-5/6 h-screen mx-auto flex object-contain transition-transform duration-1000" 
+                    className="w-5/6 h-screen mx-auto my-6 flex transition-transform duration-1000 min-h-[500px] max-h-[500px]" 
                 />
             </div>
             <div className="absolute flex top-0 right-8 space-x-1">

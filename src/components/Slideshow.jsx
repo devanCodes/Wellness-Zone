@@ -35,12 +35,12 @@ const Slideshow = () => {
             <div className="absolute top-1/2 left-2 transform -translate-y-1/2 p-2 text-white cursor-pointer hover:text-white/70">
                 <BsArrowLeftSquare className="xl:text-6xl lg:text-4xl md:text-3xl sm:text-2xl" onClick={handlePrevSlide} />
             </div>
-            <img src={currentPhoto} alt={`Photo ${currentSlide + 1}`} className="mx-auto w-full max-h-[600px] xl:max-h-screen" />
+            <img src={currentPhoto} alt={`Photo ${currentSlide + 1}`} className="mx-auto w-full min-h-[700px] max-h-[700px] xl:max-h-screen" />
             <div className="absolute top-1/2 right-2 transform -translate-y-1/2 p-2 text-white cursor-pointer hover:text-white/70">
                 <BsArrowRightSquare className="xl:text-6xl lg:text-4xl md:text-3xl sm:text-2xl" onClick={handleNextSlide} />
             </div>
             <button
-                className="absolute bottom-4 left-1/2 transform -translate-x-1/2 xl:mb-16 xl:px-14 xl:py-4 xl:text-4xl lg:mb-12 lg:px-12 lg:py-4 lg:text-3xl md:mb-8 md:px-8 md:py-2 md:text-2xl mb-6 px-6 py-2 text-xl text-white bg-turqoise rounded-full hover:bg-turqoise/80 hover:duration-1000 lg:hover:scale-105"
+                className="absolute bottom-4 left-1/2 transform -translate-x-1/2 xl:mb-16 xl:px-14 xl:py-4 xl:text-4xl lg:mb-12 lg:px-12 lg:py-4 lg:text-3xl md:mb-12 md:px-8 md:py-2 md:text-2xl mb-12 px-6 py-2 text-xl text-white bg-turqoise rounded-full hover:bg-turqoise/80 hover:duration-1000 lg:hover:scale-105"
                 onClick={handleJoinNow}
             >
                 Join Now!

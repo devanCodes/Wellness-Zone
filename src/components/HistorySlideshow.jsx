@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { Parallax } from 'react-parallax';
 import photo1 from '../resources/about_photos/AM1.png';
 import photo2 from '../resources/about_photos/AM2.png';
 import photo3 from '../resources/about_photos/AM3.png';
 import photo4 from '../resources/about_photos/AM4.png';
 import photo5 from '../resources/about_photos/AM5.png';
+import photo6 from '../resources/about_photos/AM6.png';
+import photo7 from '../resources/about_photos/AM7.png';
 
 
 // const HistorySlideshow = () => {
@@ -44,39 +47,68 @@ import photo5 from '../resources/about_photos/AM5.png';
 //     );
 // };
 
+// const HistorySlideshow = () => {
+//     return (
+//         <>
+//             <div className="bg-center mx-auto" style={{backgroundImage: `url(${photo1})`}}>
+//                 <div className="h-screen bg-opacity-75 flex justify-center pt-[80px]">
+
+//                 </div>
+//             </div>
+//             {/* <h1 className="bg-white h-[400px]">Hello</h1> */}
+//             <div className="bg-fixed bg-center mx-auto" style={{backgroundImage: `url(${photo2})`}}>
+//                 <div className="h-screen bg-opacity-75 flex justify-center pt-[80px]">
+
+//                 </div>
+//             </div>
+//             {/* <h1 className="bg-white h-[400px]">Hello</h1> */}
+//             <div className="bg-fixed bg-center mx-auto" style={{backgroundImage: `url(${photo3})`}}>
+//                 <div className="h-[600px] bg-opacity-75 flex justify-center pt-[80px]">
+
+//                 </div>
+//             </div>
+//             {/* <h1 className="bg-white h-[400px]">Hello</h1> */}
+//             <div className="bg-fixed bg-center mx-auto" style={{backgroundImage: `url(${photo4})`}}>
+//                 <div className="h-[1000px] bg-opacity-75 flex justify-center pt-[80px]">
+
+//                 </div>
+//             </div>
+//             {/* <h1 className="bg-white h-[400px]">Hello</h1> */}
+//             <div className="bg-center mx-auto" style={{backgroundImage: `url(${photo5})`}}>
+//                 <div className="h-[750px] bg-opacity-75 flex justify-center pt-[80px]">
+
+//                 </div>
+//             </div>
+//         </>
+//     )
+// }
+
 const HistorySlideshow = () => {
     return (
-        <>
-            <div className="bg-center mx-auto" style={{backgroundImage: `url(${photo1})`}}>
-                <div className="h-screen bg-opacity-75 flex justify-center pt-[80px]">
-
-                </div>
+        <div>
+            <img src={photo1} className="w-full h-screen"></img>
+            <div className="bg-white">
+                <h3 className="uppercase text-xl text-center pt-2">Mi historia</h3>
+                <p className='text-justify p-12 py-4'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, doloremque amet, possimus, numquam unde aliquid vitae repellat harum distinctio minima fugit commodi rem asperiores hic in omnis beatae dolorem. Eligendi!</p>
             </div>
-            {/* <h1 className="bg-white h-[400px]">Hello</h1> */}
-            <div className="bg-fixed bg-center mx-auto" style={{backgroundImage: `url(${photo2})`}}>
-                <div className="h-screen bg-opacity-75 flex justify-center pt-[80px]">
-
-                </div>
+            <Parallax className="image relative h-screen" bgImage={photo2} strength={800}>
+            </Parallax>
+            <div className="bg-white">
+                <h3 className="uppercase text-xl text-center pt-2">Mi historia</h3>
+                <p className='text-justify p-12 py-4'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, doloremque amet, possimus, numquam unde aliquid vitae repellat harum distinctio minima fugit commodi rem asperiores hic in omnis beatae dolorem. Eligendi!</p>
             </div>
-            {/* <h1 className="bg-white h-[400px]">Hello</h1> */}
-            <div className="bg-fixed bg-center mx-auto" style={{backgroundImage: `url(${photo3})`}}>
-                <div className="h-[600px] bg-opacity-75 flex justify-center pt-[80px]">
-
-                </div>
+            <Parallax className="image relative h-screen" bgImage={photo3} strength={800}>
+            </Parallax>
+            <div className="bg-white">
+                <h3 className="uppercase text-xl text-center pt-2">Mi historia</h3>
+                <p className='text-justify p-12 py-4'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, doloremque amet, possimus, numquam unde aliquid vitae repellat harum distinctio minima fugit commodi rem asperiores hic in omnis beatae dolorem. Eligendi!</p>
             </div>
-            {/* <h1 className="bg-white h-[400px]">Hello</h1> */}
-            <div className="bg-fixed bg-center mx-auto" style={{backgroundImage: `url(${photo4})`}}>
-                <div className="h-[1000px] bg-opacity-75 flex justify-center pt-[80px]">
-
-                </div>
-            </div>
-            {/* <h1 className="bg-white h-[400px]">Hello</h1> */}
-            <div className="bg-center mx-auto" style={{backgroundImage: `url(${photo5})`}}>
-                <div className="h-[750px] bg-opacity-75 flex justify-center pt-[80px]">
-
-                </div>
-            </div>
-        </>
+            <Parallax className="image relative h-screen" bgImage={photo4} strength={800}>
+            </Parallax>
+            <img src={photo5}></img>
+            <img src={photo6}></img>
+            <img src={photo7}></img>
+        </div>
     )
 }
 

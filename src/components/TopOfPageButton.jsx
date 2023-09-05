@@ -25,7 +25,7 @@ const TopOfPageButton = () => {
     };
 
     return (
-        <div className={`fixed bottom-4 right-4 ease-in duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'} hidden md:block lg:block xl:block`}>
+        <div className={`fixed bottom-4 right-4 ease-in duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'} hidden lg:block xl:block`}>
             <BsArrowUpSquare className="xl:text-6xl lg:text-4xl md:text-4xl cursor-pointer hover:text-black/70" onClick={handleScrollToTop} />
         </div>
     );
