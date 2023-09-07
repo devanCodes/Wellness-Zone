@@ -3,6 +3,7 @@ import photo1 from '../resources/transformation_photos/TP1.png';
 import photo2 from '../resources/transformation_photos/TP2.png';
 import photo3 from '../resources/transformation_photos/TP3.png';
 import photo4 from '../resources/transformation_photos/TP4.png';
+import photo5 from '../resources/transformation_photos/TP5.png';
 import { BsCircle } from 'react-icons/bs';
 
 
@@ -15,7 +16,7 @@ const TransformationSlideshow = () => {
         clearInterval(autoCycleInterval);
     };
 
-    const photos = [photo1, photo2, photo3, photo4];
+    const photos = [photo1, photo2, photo3, photo4, photo5];
     const currentPhoto = photos[currentSlide];
 
     // automatic slideshow cycle
@@ -34,7 +35,7 @@ const TransformationSlideshow = () => {
                 <img 
                     src={currentPhoto} 
                     alt={`Photo ${currentSlide + 1}`} 
-                    className="w-5/6 h-screen mx-auto my-6 flex transition-transform duration-1000 min-h-[500px] max-h-[500px]" 
+                    className="w-5/6 h-screen mx-auto my-8 flex transition-transform duration-1000 min-h-[500px] max-h-[500px]" 
                 />
             </div>
             <div className="absolute flex top-0 right-8 space-x-1">
