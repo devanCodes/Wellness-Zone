@@ -40,6 +40,9 @@ function HarrisBenedictCalculator() {
       case heightFeet < 1 && heightUnit === "m":
         errorMessage = "Height must be at least 1 m";
         break;
+      case heightInches > 11 && heightUnit === "ft":
+        errorMessage = "Value for inches should be between 0 and 11";
+        break;
       default:
         // no specific error, proceed with calculation
         break;
@@ -204,6 +207,7 @@ function HarrisBenedictCalculator() {
                 }
               }}
               min="0"
+              max="11"
             />{" "}
             in
           </>
