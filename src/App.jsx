@@ -15,6 +15,7 @@ import TopOfPageButton from "./components/TopOfPageButton.jsx";
 const App = () => {
   return (
     <div className="bg-gradient-to-b from-slate-300 to-slate-800">
+      {/* setting up client-side routing using React Router */}
       <Router>
         <div className="relative container flex mx-auto">
           <TopOfPageButton />

@@ -1,8 +1,9 @@
 import React from "react";
-import { HashLink as Link } from "react-router-hash-link";
+import { HashLink as Link } from "react-router-hash-link"; // importing the 'HashLink' and aliasing it as 'Link'; this is used for creating links with hash fragments to navigate within the same page
 import IGLogo from "../resources/logo/IG_logo.png";
 
 const Footer = () => {
+  // define an event handler to handle clicks on an Instagram button/icon; redirects user to the Instagram profile of my wife's fitness page
   const handleInstagramClick = () => {
     window.location.href = "https://www.instagram.com/wellness.zone01/";
   };
@@ -69,6 +70,7 @@ const Footer = () => {
 
       <div className="mx-auto text-center py-3">
         <p className="text-sm leading-4 text-white font-semibold pt-2">
+          {/* dynamically generates the current year; used to display the current year in the copyright notice */}
           &copy; {new Date().getFullYear()} Wellness Zone. All rights reserved.
         </p>
       </div>

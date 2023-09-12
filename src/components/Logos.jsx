@@ -3,14 +3,15 @@ import IGLogo from "../resources/logo/IG_logo.png";
 import WZLogo from "../resources/logo/WZ_logo.png";
 
 const Logos = () => {
+  // define an event handler to handle clicks on an Instagram button/icon; redirects user to the Instagram profile of my wife's fitness page
   const handleInstagramClick = () => {
     window.location.href = "https://www.instagram.com/wellness.zone01/";
   };
 
   return (
-    <div className="relative container flex justify-center bg-turqoise h-auto mx-auto">
+    <div className="relative container flex justify-center bg-turqoise h-[200px] mx-auto">
       <img
-        className="mx-auto w-72 h-64"
+        className="mx-auto w-72 h-56"
         src={WZLogo}
         alt="Wellness Zone Logo"
       />

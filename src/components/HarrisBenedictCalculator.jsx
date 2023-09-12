@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 function HarrisBenedictCalculator() {
-  // creating state variables for user inputs
+  // intializing state variables for user inputs; the initial value for gender is 'male', for weightUnit is 'kg', and for activityLevel is 'sedentary'; the rest initial values are empty strings
+  // all of these will be used to store the user's inputs for each category
   const [gender, setGender] = useState("male");
   const [weight, setWeight] = useState("");
   const [weightUnit, setWeightUnit] = useState("kg");
@@ -13,7 +14,7 @@ function HarrisBenedictCalculator() {
   const [caloricMaintenance, setCaloricMaintenance] = useState("");
 
   // define calculation logic based on the H-B formula
-
+  // taking the formula and user inputs
   const calculateCaloricMaintenance = () => {
     // validate input values
     if (!age || !weight || !heightFeet || !heightInches) {
@@ -73,6 +74,7 @@ function HarrisBenedictCalculator() {
       }
 
       return (
+        // final BMR calculation for males
         66.5 + 13.75 * weightInKg + 5.003 * heightInCm - 6.755 * parseFloat(age)
       );
     };
@@ -94,6 +96,7 @@ function HarrisBenedictCalculator() {
       }
 
       return (
+        // final BMR calculation for females
         655.1 + 9.563 * weightInKg + 1.85 * heightInCm - 4.676 * parseFloat(age)
       );
     };
@@ -121,6 +124,9 @@ function HarrisBenedictCalculator() {
   };
 
   return (
+    // JSX structure that includes a form for user inputs and a button to trigger the calculation
+    // input fields are controlled components, meaning their values are controlled by the state variables, and their changes are tracked using the 'onChange' event handlers
+    // some input fields have specific validation logic, such as preventing non-digit characters and limiting the input range
     <div className="p-6 mx-auto container flex flex-col w-full space-y-6">
       <label className="block text-xl font-medium mb-1">
         Gender:
@@ -312,7 +318,7 @@ function HarrisBenedictCalculator() {
       </label>
       <button
         className="flex justify-center mx-auto font-semibold p-3 px-6 pt-2 w-44 text-white bg-stone-700 rounded-lg baseline hover:bg-stone-600 hover:duration-500 hover:scale-105"
-        onClick={calculateCaloricMaintenance}
+        onClick={calculateCaloricMaintenance} // triggers the calculateCaloricMaintenance function
       >
         Calculate
       </button>

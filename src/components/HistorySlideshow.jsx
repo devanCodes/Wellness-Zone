@@ -1,5 +1,5 @@
 import React from "react";
-import { Parallax } from "react-parallax";
+import { Parallax } from "react-parallax"; // importing the Parallax component from react-parallax to achieve desired effect for some images
 import photo1 from "../resources/about_photos/AM1.png";
 import photo2 from "../resources/about_photos/AM2.png";
 import photo3 from "../resources/about_photos/AM3.png";
@@ -41,6 +41,7 @@ const HistorySlideshow = () => {
           myself, despite my unknown condition." (RIGHT PHOTO)
         </p>
       </div>
+      {/* these components have a 'bgImage' prop that specifies the background image and a 'strength' prop that determines the parallax effect strength */}
       <Parallax
         className="relative flex h-screen"
         bgImage={photo2}
@@ -69,6 +70,7 @@ const HistorySlideshow = () => {
           chronic inflammation. More than half the time I am inflamed.
         </p>
       </div>
+      {/* these components have a 'bgImage' prop that specifies the background image and a 'strength' prop that determines the parallax effect strength */}
       <Parallax
         className="relative flex h-screen"
         bgImage={photo3}
