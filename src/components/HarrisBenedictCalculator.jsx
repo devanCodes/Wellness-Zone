@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function HarrisBenedictCalculator() {
-  // intializing state variables for user inputs; the initial value for gender is 'male', for weightUnit is 'kg', and for activityLevel is 'sedentary'; the rest initial values are empty strings
+  // intializing state variables for user inputs; the initial value for gender is 'male', for weightUnit is 'kg', for heightUnit is 'm', and for activityLevel is 'sedentary'; the remaining initial values are empty strings
   // all of these will be used to store the user's inputs for each category
   const [gender, setGender] = useState("male");
   const [weight, setWeight] = useState("");
@@ -61,7 +61,7 @@ function HarrisBenedictCalculator() {
       const weightInKg =
         weightUnit === "kg"
           ? parseFloat(weight)
-          : parseFloat(weight) * 0.453592;
+          : parseFloat(weight) * 0.453592; // if weightUnit is not kg (meaning it will be lbs), then we have to convert it to kg's
 
       let heightInCm = 0;
       if (heightUnit === "m") {
@@ -83,7 +83,7 @@ function HarrisBenedictCalculator() {
       const weightInKg =
         weightUnit === "kg"
           ? parseFloat(weight)
-          : parseFloat(weight) * 0.453592;
+          : parseFloat(weight) * 0.453592; // if weightUnit is not kg (meaning it will be lbs), then we have to convert it to kg's
 
       let heightInCm = 0;
       if (heightUnit === "m") {
@@ -120,7 +120,7 @@ function HarrisBenedictCalculator() {
     const maintenance = bmr * activiyMultipliers[activityLevel];
 
     // update state variable for displaying the calculated result
-    setCaloricMaintenance(maintenance.toFixed(2));
+    setCaloricMaintenance(maintenance.toFixed(0));
   };
 
   return (
