@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 
 const Navigation = () => {
-  // initializes a state variable 'isMenuOpen' using the 'useState' hook, which will be used to determine whether the mobile menu is open or not
+  // initializes a state variable 'isMenuOpen' with an initial value 'false' using the 'useState' hook, which will be used to determine whether the mobile menu is open or not
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // this toggles the value of 'isMenuOpen' when called; used to open and close the mobile menu when the button is clicked

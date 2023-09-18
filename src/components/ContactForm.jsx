@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom"; // this hook is used to access t
 import emailjs from "@emailjs/browser"; // library used to send and receive emails; in this case, it is used to receive inputted data in an email from users who fill out the contact form and submit it 
 
 const ContactForm = () => {
-  // initializes a state variables 'name', 'phoneNumber', 'message', and 'errorMessage' using the 'useState' hook, with an initial value of an empty string; will be used to store the user's name phone number, message, and error message inputs
+  // initializes state variables 'name', 'phoneNumber', 'message', and 'errorMessage' using the 'useState' hook, with an initial value of an empty string; will be used to store the user's name, phone number, message, and error message inputs
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");

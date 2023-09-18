@@ -65,7 +65,7 @@ function HarrisBenedictCalculator() {
 
       let heightInCm = 0;
       if (heightUnit === "m") {
-        // If height is in meters, convert centimeters to meters
+        // If height is in meters, convert meters to centimeters
         heightInCm = parseFloat(heightFeet) * 100 + parseFloat(heightInches);
       } else {
         // If height is in feet/inches, convert feet and inches to centimeters
@@ -87,7 +87,7 @@ function HarrisBenedictCalculator() {
 
       let heightInCm = 0;
       if (heightUnit === "m") {
-        // If height is in meters, convert centimeters to meters
+        // If height is in meters, convert meters to centimeters
         heightInCm = parseFloat(heightFeet) * 100 + parseFloat(heightInches);
       } else {
         // If height is in feet/inches, convert feet and inches to centimeters
@@ -119,7 +119,7 @@ function HarrisBenedictCalculator() {
 
     const maintenance = bmr * activiyMultipliers[activityLevel];
 
-    // update state variable for displaying the calculated result
+    // update state variable for displaying the calculated result; 'toFixed(0)' is used to ensure that the result is a whole number
     setCaloricMaintenance(maintenance.toFixed(0));
   };
 
