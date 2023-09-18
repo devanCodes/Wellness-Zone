@@ -52,7 +52,7 @@ const Slideshow = () => {
       <img
         src={currentPhoto}
         alt={`Photo ${currentSlide + 1}`}
-        className="mx-auto w-full min-h-[700px] max-h-[700px] xl:max-h-screen"
+        className="mx-auto w-full min-h-[500px] max-h-[700px] xl:max-h-screen"
       />
       <div className="absolute top-1/2 right-2 transform -translate-y-1/2 p-2 text-white cursor-pointer hover:text-white/70">
         <BsArrowRightSquare
