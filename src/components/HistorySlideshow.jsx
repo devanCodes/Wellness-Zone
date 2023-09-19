@@ -8,7 +8,7 @@ import photo4 from "../resources/about_photos/AM4.png";
 const HistorySlideshow = () => {
   return (
     <div>
-      <img src={photo1} className="w-full h-[400px]"></img>
+      <img src={photo1} className="w-full h-[400px] md:h-[600px]"></img>
       <div className="bg-white">
         <h3 className="uppercase text-xl text-center pt-2">
           Mi historia / My story
@@ -43,7 +43,7 @@ const HistorySlideshow = () => {
       </div>
       {/* these components have a 'bgImage' prop that specifies the background image and a 'strength' prop that determines the parallax effect strength */}
       <Parallax
-        className="relative flex h-[400px]"
+        className="relative flex h-[400px] md:h-[600px]"
         bgImage={photo2}
         strength={500}
       ></Parallax>
@@ -72,7 +72,7 @@ const HistorySlideshow = () => {
       </div>
       {/* these components have a 'bgImage' prop that specifies the background image and a 'strength' prop that determines the parallax effect strength */}
       <Parallax
-        className="relative flex h-[400px]"
+        className="relative flex h-[400px] md:h-[600px]"
         bgImage={photo3}
         strength={500}
       ></Parallax>
@@ -87,7 +87,7 @@ const HistorySlideshow = () => {
           to the situations that happen to us?
         </p>
       </div>
-      <img src={photo4} className="w-full h-[400px]"></img>
+      <img src={photo4} className="w-full h-[400px] md:h-[600px] xl:h-[700px]"></img>
     </div>
   );
 };
