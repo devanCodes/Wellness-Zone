@@ -4,6 +4,7 @@ import photo2 from "../resources/transformation_photos/TP2.png";
 import photo3 from "../resources/transformation_photos/TP3.png";
 import photo4 from "../resources/transformation_photos/TP4.png";
 import photo5 from "../resources/transformation_photos/TP5.png";
+import photo6 from "../resources/transformation_photos/TP6.png";
 import { BsCircle } from "react-icons/bs";
 
 const TransformationSlideshow = () => {
@@ -18,7 +19,7 @@ const TransformationSlideshow = () => {
   };
 
   // creating an array of photos 
-  const photos = [photo1, photo2, photo3, photo4, photo5];
+  const photos = [photo1, photo2, photo3, photo4, photo5, photo6];
   // 'currentPhoto' is assigned the image path of the current slide based on the 'currentSlide' state
   const currentPhoto = photos[currentSlide];
 

@@ -61,7 +61,7 @@ const Slideshow = () => {
         />
       </div>
       <button
-        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 xl:mb-16 xl:px-14 xl:py-4 xl:text-4xl lg:mb-12 lg:px-12 lg:py-4 lg:text-3xl md:mb-12 md:px-8 md:py-2 md:text-2xl mb-12 px-6 py-2 text-xl text-white bg-turqoise rounded-full hover:bg-turqoise/80 hover:duration-1000 lg:hover:scale-105"
+        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 xl:mb-16 xl:px-14 xl:py-4 xl:text-4xl lg:mb-12 lg:px-12 lg:py-4 lg:text-3xl md:mb-12 md:px-8 md:py-2 md:text-2xl mb-12 px-6 py-2 text-xl text-white bg-turqoise rounded-full hover:bg-turqoise/80 hover:duration-1000 lg:hover:scale-105"
         onClick={handleJoinNow}
       >
         Join Now!

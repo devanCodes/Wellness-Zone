@@ -16,7 +16,7 @@ const Testimonials = () => {
           />
           <div>
             <h2 className="font-bold text-sm">Devan Hailey</h2>
-            <h3 className="text-xs opacity-50">Boyfriend/Gym Partner</h3>
+            <h3 className="text-xs opacity-50">Gym Partner</h3>
           </div>
         </div>
         <p className="relative z-10 mt-4 font-bold text-xl leading-tight">

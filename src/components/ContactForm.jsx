@@ -74,7 +74,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-[310px] h-[410px] flex flex-col justify-between items-center bg-stone-700 rounded-lg border-2 border-white text-white shadow-lg shadow-stone-700/80">
+    <div className="relative w-[310px] h-[410px] flex flex-col justify-between items-center bg-stone-700 rounded-lg border-2 border-white text-white shadow-lg shadow-stone-700/80">
       {/* this conditionally renders an error message if 'errorMessage' is truthy; will display the error message to the user */}
       {errorMessage && <p>{errorMessage}</p>}
       <form className="h-52 w-full p-4 space-y-4" onSubmit={handleSubmit}>
@@ -107,7 +107,7 @@ const ContactForm = () => {
         <div>
           <label htmlFor="message">Message:</label>
           <textarea
-            className="text-center w-full h-12 text-black rounded-lg"
+            className="text-center w-full h-12 text-black rounded-lg resize-none"
             id="message"
             value={message}
             name="message"
